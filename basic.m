@@ -19,6 +19,7 @@ mem = zeros(1, pages);
 
 totaltime = 0
 downtime = 0
+totaldata = 0
 
 % precopy phase
 % LRU, PFR
@@ -26,6 +27,7 @@ downtime = 0
 reads = r * 0.4 
 pretime = reads * pagesize/b
 totaltime += pretime
+totaldata += reads
 
 % stop-and-copy phase
 % send the CPU and device states
@@ -34,3 +36,4 @@ downtime = scinfo/b
 % postcopy phase
 posttime = (r - reads)/b
 totaltime += posttime
+totaldata += (r - reads)
