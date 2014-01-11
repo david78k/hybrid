@@ -23,7 +23,8 @@ downtime = 0
 % precopy phase
 % LRU, PFR
 % send the pages most likely to be read
-pretime = 100/b
+reads = r * 0.4 
+pretime = reads * pagesize/b
 totaltime += pretime
 
 % stop-and-copy phase
@@ -31,5 +32,5 @@ totaltime += pretime
 downtime = scinfo/b
 
 % postcopy phase
-posttime = 199/b
+posttime = (r - reads)/b
 totaltime += posttime
