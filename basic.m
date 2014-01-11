@@ -15,7 +15,7 @@ scinfo = 100
 % stop-and-copy time in ms
 sctime = 10 
 
-mem = zeros(pages)
+mem = zeros(1, pages)
 
 totaltime = 0
 downtime = 0
