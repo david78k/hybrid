@@ -1,6 +1,6 @@
 % basic hybrid copy migration
-% memory size in GB
-r = 4
+% memory size in MB
+r = 512
 
 % bandwidth in gbps
 b = 1000 
@@ -8,7 +8,7 @@ b = 1000
 dirtyrate = 4 % percent (%)
 
 pagesize = 4 % in KB
-pages = r * 1024 * 1024 / pagesize
+pages = r * 1024 / pagesize
 
 % amount of CPU and device states in KB 
 scinfo = 100
