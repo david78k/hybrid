@@ -1,6 +1,6 @@
 % basic hybrid copy migration
 % memory size in MB
-r = 512
+r = 4096
 
 % bandwidth in gbps
 b = 1000 
@@ -15,7 +15,7 @@ scinfo = 100
 % stop-and-copy time in ms
 sctime = 10 
 
-mem = zeros(1, pages)
+mem = zeros(1, pages);
 
 totaltime = 0
 downtime = 0

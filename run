@@ -1,4 +1,5 @@
-octave basic.m --enable-64
+#octave basic.m --enable-64
+octave basic.m
 
 git add .
 git commit -a -m basic.m
