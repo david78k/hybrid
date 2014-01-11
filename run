@@ -1,0 +1,5 @@
+octave basic.m
+
+git add .
+git commit -a -m basic.m
+git push

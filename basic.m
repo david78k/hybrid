@@ -5,14 +5,20 @@ r = 4
 % bandwidth in gbps
 b = 1000 
 
-totaltime = 0
-downtime = 0
+dirtyrate = 4 % percent (%)
+
+pagesize = 4 % in KB
+pages = r * 1024 * 1024 / pagesize
+
 % amount of CPU and device states in KB 
 scinfo = 100
 % stop-and-copy time in ms
 sctime = 10 
 
-mem = arr[r * 1024]
+mem = zeros(pages)
+
+totaltime = 0
+downtime = 0
 
 % precopy phase
 % LRU, PFR
