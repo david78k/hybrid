@@ -17,7 +17,10 @@ comp = 0.5
 % amount of CPU and device states in KB 
 scinfo = 100
 
-% 0: zero, 1: dirtied, 2: read, 3: inactive data
+% working set size
+wss = numpages * 0.25
+
+% 0: zero, 1: read, 2: dirtied, 3: inactive data
 mem = zeros(1, numpages);
 
 totaltime = 0
@@ -30,8 +33,10 @@ totaldata = 0
 % scan the dirtied pages
 % for dirtied pages
 % 	mark dirtied (1)
+% 	mem(random (1, wss * 0.1))	
 % for read pages
 % 	mark read (2)
+% 	mem (random (wss * 0.1, wss * 0.2))
 
 % for pages
 % 	predict read/write
@@ -56,7 +61,8 @@ downtime = (scinfo + bitmapsize)/b
 
 % postcopy phase
 postsent = (numpages - reads) * pagesize
-% if there are predicted dirtied pages
+
+% exclude the predicted dirtied pages 
 pred_dirts = numpages * 0.1
 postsent = (numpages - reads - pred_dirts) * pagesize
 posttime = postsent/b
