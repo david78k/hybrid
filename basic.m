@@ -44,16 +44,18 @@ reads = numpages * 0.4
 % 	mark sent
 %	insert the pages into cache and perform delta compression
 
-pretime = reads * pagesize/b
+present = reada * pagesize
+pretime = present/b
 totaltime += pretime
-totaldata += reads
+totaldata += present
 
 % stop-and-copy phase
 % send the CPU and device states
 downtime = scinfo/b
 
 % postcopy phase
-posttime = (r - reads)/b
+postsent = (numpages - reads) * pagesize
+posttime = postsent/b
 totaltime += posttime
-totaldata += (r - reads)
+totaldata += postsent
 
