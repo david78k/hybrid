@@ -56,6 +56,9 @@ downtime = (scinfo + bitmapsize)/b
 
 % postcopy phase
 postsent = (numpages - reads) * pagesize
+% if there are predicted dirtied pages
+pred_dirts = numpages * 0.1
+postsent = (numpages - reads - pred_dirts) * pagesize
 posttime = postsent/b
 totaltime += posttime
 totaldata += postsent
