@@ -4,6 +4,7 @@ r = 4096
 
 % bandwidth in gbps
 b = 1000 
+b = b * 1024/8 % convert to KB
 
 dirtyrate = 4 % percent (%)
 
@@ -27,8 +28,6 @@ totaldata = 0
 
 % precopy phase
 % LRU, PFR
-% send the pages most likely to be read
-reads = numpages * 0.4 
 
 % scan the dirtied pages
 % for dirtied pages
@@ -38,6 +37,9 @@ reads = numpages * 0.4
 
 % for pages
 % 	predict read/write
+
+% send the pages most likely to be read
+reads = numpages * 0.4 
 
 % LRU
 % for LRU queue
