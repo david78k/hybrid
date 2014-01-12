@@ -34,6 +34,7 @@ totaldata = 0
 % for dirtied pages
 % 	mark dirtied (1)
 % 	mem(random (1, wss * 0.1))	
+randperm(wss * 0.1)
 % for read pages
 % 	mark read (2)
 % 	mem (random (wss * 0.1, wss * 0.2))
@@ -41,7 +42,8 @@ totaldata = 0
 % for pages
 % 	predict read/write
 
-% send the pages most likely to be read
+% send the pages most likely to be read and least likely to be dirtied
+% construct queue with the order of p1/p2
 reads = numpages * 0.4 
 
 % LRU
