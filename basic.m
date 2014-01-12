@@ -44,7 +44,7 @@ reads = numpages * 0.4
 % 	mark sent
 %	insert the pages into cache and perform delta compression
 
-present = reada * pagesize
+present = reads * pagesize
 pretime = present/b
 totaltime += pretime
 totaldata += present
