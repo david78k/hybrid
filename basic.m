@@ -53,7 +53,8 @@ totaldata += present
 
 % stop-and-copy phase
 % send the CPU and device states
-downtime = scinfo/b
+bitmapsize = 500 % KB
+downtime = (scinfo + bitmapsize)/b
 
 % postcopy phase
 postsent = (numpages - reads) * pagesize
