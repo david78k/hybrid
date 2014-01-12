@@ -16,8 +16,6 @@ comp = 0.5
 
 % amount of CPU and device states in KB 
 scinfo = 100
-% stop-and-copy time in ms
-sctime = 10 
 
 % 0: zero, 1: dirtied, 2: read, 3: inactive data
 mem = zeros(1, numpages);
