@@ -17,7 +17,7 @@ comp = 0.5
 % amount of CPU and device states in KB 
 scinfo = 100
 
-% working set size
+% working set size in number of pages
 wss = numpages * 0.25
 
 % 0: zero, 1: read, 2: dirtied, 3: inactive data
@@ -33,8 +33,14 @@ totaldata = 0;
 fprintf('\n')
 disp('Precopy migration')
 % iterations
+present = r
+pretime = present / b
+totaltime += pretime
 
 % stop-and-copy phase
+dirts = wss * dirtyrate /100
+downtwime = (scinfo + dirts) / b
+totaltime += downtime
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -101,6 +107,7 @@ totaldata += present
 % send the CPU and device states
 bitmapsize = 500 % KB
 downtime = (scinfo + bitmapsize)/b
+totaltime += downtime
 
 % postcopy phase
 postsent = (numpages - reads) * pagesize
