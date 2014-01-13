@@ -66,7 +66,7 @@ totaldata = 0
 % for dirtied pages
 % 	mark dirtied (1)
 % 	mem(random (1, wss * 0.1))	
-randperm(int64(wss * 0.1))
+randperm(int64(wss * 0.1));
 % for read pages
 % 	mark read (2)
 % 	mem (random (wss * 0.1, wss * 0.2))
