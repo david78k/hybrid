@@ -27,6 +27,38 @@ totaltime = 0
 downtime = 0
 totaldata = 0
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% precopy migration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% iterations
+
+% stop-and-copy phase
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% postcopy migration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+totaltime = 0
+downtime = 0
+totaldata = 0
+
+% stop-and-copy phase
+
+% prepaging (bubbling) and on-demand paging
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% hybrid copy migration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+totaltime = 0
+downtime = 0
+totaldata = 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% proactive hybrid copy migration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+totaltime = 0
+downtime = 0
+totaldata = 0
+
 % precopy phase
 % LRU, PFR
 
