@@ -1,6 +1,7 @@
 % basic hybrid copy migration
 % memory size in MB
 r = 4096
+r *= 1024 % convert to KB
 
 % bandwidth in gbps
 b = 1000 
@@ -9,7 +10,7 @@ b = b * 1024/8 % convert to KB
 dirtyrate = 4 % percent (%)
 
 pagesize = 4 % in KB
-numpages = r * 1024 / pagesize
+numpages = r / pagesize
 
 % delta compression rate
 comp = 0.5 
@@ -36,11 +37,13 @@ disp('Precopy migration')
 present = r
 pretime = present / b
 totaltime += pretime
+totaldata += present
 
 % stop-and-copy phase
 dirts = wss * dirtyrate /100
 downtwime = (scinfo + dirts) / b
 totaltime += downtime
+totaldata += dirts
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
