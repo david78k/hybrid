@@ -30,6 +30,8 @@ totaldata = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % precopy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+fprintf('\n')
+disp('Precopy migration')
 % iterations
 
 % stop-and-copy phase
@@ -37,6 +39,8 @@ totaldata = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+fprintf('\n')
+disp('Postcopy migration')
 totaltime = 0
 downtime = 0
 totaldata = 0
@@ -48,6 +52,8 @@ totaldata = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hybrid copy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+fprintf('\n')
+disp('Hybrid copy migration')
 totaltime = 0
 downtime = 0
 totaldata = 0
