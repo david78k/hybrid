@@ -55,6 +55,7 @@ totaldata = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % proactive hybrid copy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+disp('Proactive hybrid copy migration')
 totaltime = 0
 downtime = 0
 totaldata = 0
