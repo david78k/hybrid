@@ -23,9 +23,9 @@ wss = numpages * 0.25
 % 0: zero, 1: read, 2: dirtied, 3: inactive data
 mem = zeros(1, numpages);
 
-totaltime = 0
-downtime = 0
-totaldata = 0
+totaltime = 0;
+downtime = 0;
+totaldata = 0;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % precopy migration
@@ -41,9 +41,9 @@ disp('Precopy migration')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf('\n')
 disp('Postcopy migration')
-totaltime = 0
-downtime = 0
-totaldata = 0
+totaltime = 0;
+downtime = 0;
+totaldata = 0;
 
 % stop-and-copy phase
 
@@ -54,9 +54,9 @@ totaldata = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf('\n')
 disp('Hybrid copy migration')
-totaltime = 0
-downtime = 0
-totaldata = 0
+totaltime = 0;
+downtime = 0;
+totaldata = 0;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % proactive hybrid copy migration
@@ -64,9 +64,9 @@ totaldata = 0
 %disp(char(10))
 fprintf('\n')
 disp('Proactive hybrid copy migration')
-totaltime = 0
-downtime = 0
-totaldata = 0
+totaltime = 0;
+downtime = 0;
+totaldata = 0;
 
 % precopy phase
 % LRU, PFR
