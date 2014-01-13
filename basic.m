@@ -55,7 +55,8 @@ totaldata = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % proactive hybrid copy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-disp(char(10))
+%disp(char(10))
+fprintf('\n')
 disp('Proactive hybrid copy migration')
 totaltime = 0
 downtime = 0
