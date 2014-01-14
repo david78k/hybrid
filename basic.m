@@ -31,6 +31,7 @@ mem = zeros(1, numpages);
 
 % prediction accuracy 0 through 1
 acc = 1
+acc = 0
 
 totaltime = 0;
 downtime = 0;
@@ -137,6 +138,7 @@ randperm(int64(wss * 0.1));
 % 	predict read/write
 
 % send the pages most likely to be read and least likely to be dirtied
+% do not send the pages most likely to be dirtied
 % construct queue with the order of p1/p2
 %reads = numpages * 0.4 
 % total read rate = wss * read_rate = 0.25 * 0.16 = 0.04 (4%)
