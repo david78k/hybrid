@@ -165,7 +165,7 @@ bitmapsize = 500 % KB
 scsent = scinfo + bitmapsize
 downtime = scsent/b
 totaltime += downtime
-totaldat += scsent
+totaldata += scsent
 
 % postcopy phase
 postsent = (numpages - reads) * pagesize
