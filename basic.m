@@ -84,7 +84,7 @@ NFR = 0.2
 % hybrid copy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf('\n')
-disp('Hybrid copy migration')
+disp('====================== Hybrid copy migration ======================')
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
@@ -116,7 +116,7 @@ NFR = 0.2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %disp(char(10))
 fprintf('\n')
-disp('Proactive hybrid copy migration')
+disp('=============== Proactive hybrid copy migration ================')
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
