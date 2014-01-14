@@ -11,6 +11,9 @@ b = b * 1024/8 % convert to KB
 dirtyrate = 4 
 dirtyrate /= 100
 
+readrate = 4
+readrate /= 100
+
 pagesize = 4 % in KB
 numpages = r / pagesize
 
@@ -51,6 +54,9 @@ downtwime = scsent / b
 totaltime += downtime
 totaldata += scsent
 
+% network fault rate
+NFR = 0
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,6 +75,7 @@ totaldata += scsent
 % prepaging (bubbling) and on-demand paging
 postsent = r
 posttime = postsent/b
+totaltime += posttime
 totaldata += postsent
 % network fault rate
 NFR = 0.2
@@ -81,6 +88,28 @@ disp('Hybrid copy migration')
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
+
+% precopy phase: single iteration
+present = r
+pretime = present / b
+totaltime += pretime
+totaldata += present
+
+% stop-and-copy phase
+scsent = scinfo 
+downtwime = scsent / b
+totaltime += downtime
+totaldata += scsent
+
+% postcopy phase: prepaging (bubbling) and on-demand paging
+%dirts = wss * dirtyrate
+dirts = numpages * dirtyrate
+postsent = dirts * pagesize
+posttime = postsent/b
+totaltime += posttime
+totaldata += postsent
+% network fault rate
+NFR = 0.2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % proactive hybrid copy migration
@@ -148,3 +177,5 @@ posttime = postsent/b
 totaltime += posttime
 totaldata += postsent
 
+% network fault rate
+NFR = 0.2
