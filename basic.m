@@ -46,9 +46,10 @@ totaldata += present
 
 % stop-and-copy phase
 dirts = wss * dirtyrate
-downtwime = (scinfo + dirts) / b
+scsent = scinfo + dirts
+downtwime = scsent / b
 totaltime += downtime
-totaldata += dirts
+totaldata += scsent
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -60,8 +61,17 @@ downtime = 0;
 totaldata = 0;
 
 % stop-and-copy phase
+scsent = scinfo
+downtime = scsent / b
+totaltime += downtime
+totaldata += scsent
 
 % prepaging (bubbling) and on-demand paging
+postsent = r
+posttime = postsent/b
+totaldata += postsent
+% network fault rate
+NFR = 0.2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hybrid copy migration
@@ -123,8 +133,10 @@ totaldata += present
 % stop-and-copy phase
 % send the CPU and device states
 bitmapsize = 500 % KB
-downtime = (scinfo + bitmapsize)/b
+scsent = scinfo + bitmapsize
+downtime = scsent/b
 totaltime += downtime
+totaldat += scsent
 
 % postcopy phase
 postsent = (numpages - reads) * pagesize
