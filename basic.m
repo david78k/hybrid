@@ -31,7 +31,7 @@ mem = zeros(1, numpages);
 
 % prediction accuracy 0 through 1
 acc = 1
-acc = 0
+%acc = 0
 
 totaltime = 0;
 downtime = 0;
