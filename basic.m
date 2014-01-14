@@ -140,14 +140,14 @@ randperm(int64(wss * 0.1));
 % construct queue with the order of p1/p2
 %reads = numpages * 0.4 
 % total read rate = wss * read_rate = 0.25 * 0.16 = 0.04 (4%)
-read_rate = 0.16
-read_rate = 0.04 % 4% of total memory
+%read_rate = 0.16
+%read_rate = 0.04 % 4% of total memory
 % total write rate = wss * write_rate = 0.25 * 0.16 = 0.04 (4%)
-write_rate = 0.16
-write_rate = 0.04 % 4% of total memory
+%write_rate = 0.16
+%write_rate = 0.04 % 4% of total memory
 % simple case: readonly pages (RO) - zero dirtied pages 
-RO = 0.3
-pred_pages = wss * RO
+%RO = 0.3
+pred_pages = numpages * readrate * acc
 
 % LRU
 % for LRU queue
@@ -171,7 +171,7 @@ totaldata += scsent
 postsent = (numpages - pred_pages) * pagesize
 
 % exclude the predicted dirtied pages 
-pred_dirts = numpages * 0.1
+pred_dirts = numpages * dirtyrate * acc
 postsent = (numpages - pred_pages - pred_dirts) * pagesize
 posttime = postsent/b
 totaltime += posttime
