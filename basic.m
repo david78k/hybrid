@@ -40,7 +40,7 @@ totaldata = 0;
 % precopy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf('\n')
-disp('Precopy migration')
+disp('==================== Precopy migration ====================')
 % iterations
 present = r
 pretime = present / b
@@ -61,7 +61,7 @@ NFR = 0
 % postcopy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf('\n')
-disp('Postcopy migration')
+disp('===================== Postcopy migration ======================')
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
@@ -84,7 +84,7 @@ NFR = 0.2
 % hybrid copy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf('\n')
-disp('====================== Hybrid copy migration ======================')
+disp('==================== Hybrid copy migration ====================')
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
