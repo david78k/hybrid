@@ -50,7 +50,7 @@ totaldata += present
 
 % stop-and-copy phase
 dirts = wss * dirtyrate
-scsent = scinfo + dirts
+scsent = scinfo + dirts * pagesize
 downtwime = scsent / b
 totaltime += downtime
 totaldata += scsent
@@ -181,3 +181,11 @@ totaldata += postsent
 
 % network fault rate
 NFR = 0.2
+
+%%%%%%%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%%%%
+% precopy
+% postcopy
+% hybrid
+% pro-hybrid
+
+
