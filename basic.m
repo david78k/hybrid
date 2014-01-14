@@ -7,7 +7,9 @@ r *= 1024 % convert to KB
 b = 1000 
 b = b * 1024/8 % convert to KB
 
-dirtyrate = 4 % percent (%)
+% page dirty rate in percent (%): against to total memory pages
+dirtyrate = 4 
+dirtyrate /= 100
 
 pagesize = 4 % in KB
 numpages = r / pagesize
@@ -23,6 +25,9 @@ wss = numpages * 0.25
 
 % 0: zero, 1: read, 2: dirtied, 3: inactive data
 mem = zeros(1, numpages);
+
+% prediction accuracy 0 through 1
+acc = 1
 
 totaltime = 0;
 downtime = 0;
@@ -40,7 +45,7 @@ totaltime += pretime
 totaldata += present
 
 % stop-and-copy phase
-dirts = wss * dirtyrate /100
+dirts = wss * dirtyrate
 downtwime = (scinfo + dirts) / b
 totaltime += downtime
 totaldata += dirts
@@ -94,14 +99,23 @@ randperm(int64(wss * 0.1));
 
 % send the pages most likely to be read and least likely to be dirtied
 % construct queue with the order of p1/p2
-reads = numpages * 0.4 
+%reads = numpages * 0.4 
+% total read rate = wss * read_rate = 0.25 * 0.16 = 0.04 (4%)
+read_rate = 0.16
+read_rate = 0.04 % 4% of total memory
+% total write rate = wss * write_rate = 0.25 * 0.16 = 0.04 (4%)
+write_rate = 0.16
+write_rate = 0.04 % 4% of total memory
+% simple case: readonly pages (RO) - zero dirtied pages 
+RO = 0.3
+pred_pages = wss * RO
 
 % LRU
 % for LRU queue
 % 	mark sent
 %	insert the pages into cache and perform delta compression
 
-present = reads * pagesize
+present = pred_pages * pagesize
 pretime = present/b
 totaltime += pretime
 totaldata += present
