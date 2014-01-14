@@ -168,11 +168,11 @@ totaltime += downtime
 totaldata += scsent
 
 % postcopy phase
-postsent = (numpages - reads) * pagesize
+postsent = (numpages - pred_pages) * pagesize
 
 % exclude the predicted dirtied pages 
 pred_dirts = numpages * 0.1
-postsent = (numpages - reads - pred_dirts) * pagesize
+postsent = (numpages - pred_pages - pred_dirts) * pagesize
 posttime = postsent/b
 totaltime += posttime
 totaldata += postsent
