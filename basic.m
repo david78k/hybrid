@@ -8,10 +8,10 @@ b = 1000
 b = b * 1024/8 % convert to KB
 
 % page dirty rate in percent (%): against to total memory pages
-dirtyrate = 4 
+dirtyrate = 14 
 dirtyrate /= 100
 
-readrate = 4
+readrate = 14
 readrate /= 100
 
 pagesize = 4 % in KB
