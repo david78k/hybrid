@@ -184,6 +184,7 @@ totaldata += present
 % stop-and-copy phase
 % send the CPU and device states
 bitmapsize = 500 % KB
+bitmapsize = 0 % KB
 scsent = scinfo + bitmapsize
 downtime = scsent/b
 totaltime += downtime
