@@ -33,6 +33,8 @@ mem = zeros(1, numpages);
 acc = 1
 %acc = 0
 
+fontsize = 18
+
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
@@ -228,9 +230,9 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 bar(A(:,1))
-set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', 14)
-xlabel('COPY METHOD', 'FontSize', 14);
-ylabel('TIME', 'FontSize', 14);
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize)
+xlabel('COPY METHOD', 'FontSize', fontsize);
+ylabel('TIME', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %bar(x, A(:,1))
 
