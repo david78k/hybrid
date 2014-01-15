@@ -56,7 +56,7 @@ end
 
 % stop-and-copy phase
 % stop conditions: 29 iterations, 50 pages, 4 memory size sent
-scsent = scinfo + dirts * pagesize
+scsent = scinfo + present * pagesize
 downtwime = scsent / b
 totaltime += downtime
 totaldata += scsent
