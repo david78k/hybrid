@@ -113,7 +113,8 @@ totaltime += pretime
 totaldata += present
 
 % stop-and-copy phase
-scsent = scinfo 
+bitmapsize = 500 % KB
+scsent = scinfo + bitmapsize
 downtime = scsent / b
 totaltime += downtime
 totaldata += scsent
@@ -184,7 +185,6 @@ totaldata += present
 % stop-and-copy phase
 % send the CPU and device states
 bitmapsize = 500 % KB
-bitmapsize = 0 % KB
 scsent = scinfo + bitmapsize
 downtime = scsent/b
 totaltime += downtime
@@ -230,7 +230,7 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 xlabel('COPY METHOD');
 ylabel('TIME');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
-bar(A(:,:))
+bar(A(:,1))
 %bar(x, A(:,1))
 
 saveas (1, strcat(output, ".png"));
