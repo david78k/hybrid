@@ -43,13 +43,19 @@ totaldata = 0;
 fprintf('\n')
 disp('==================== Precopy migration ====================')
 % iterations
-present = r
-pretime = present / b
-totaltime += pretime
-totaldata += present
+present = numpages
+iter = 0
+while present > 50 && iter < 29 && totaldata < 4*r
+	pretime = present / b
+	totaltime += pretime
+	totaldata += present
+	present = numpages * dirtyrate
+	%dirts = wss * dirtyrate
+	iter += 1
+end
 
 % stop-and-copy phase
-dirts = wss * dirtyrate
+% stop conditions: 29 iterations, 50 pages, 4 memory size sent
 scsent = scinfo + dirts * pagesize
 downtwime = scsent / b
 totaltime += downtime
