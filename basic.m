@@ -217,6 +217,8 @@ A (4, 3) = totaldata
 
 prefix = "M4G_R14W14_acc100_r1"
 
+dlmwrite (prefix, A)
+
 %%%%%%%%%%%%%%%%%%%% total time %%%%%%%%%%%%%%%%%%%%%%
 figure;
 output = strcat(prefix, ".tt");
