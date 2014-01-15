@@ -227,7 +227,8 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 xlabel('COPY METHOD');
 ylabel('TIME');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
-bar(x, A(:,1))
+bar(A(:,))
+%bar(x, A(:,1))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
