@@ -240,7 +240,7 @@ output = strcat(prefix, ".dt");
 
 ylabel('TIME or KB');
 
-bar(x, A(:,:))
+bar(A(:,2))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
