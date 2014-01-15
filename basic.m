@@ -37,6 +37,8 @@ totaltime = 0;
 downtime = 0;
 totaldata = 0;
 
+A = zeros(4, 3)
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % precopy migration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,6 +65,10 @@ totaldata += scsent
 
 % network fault rate
 NFR = 0
+
+A (1,1) = totaltime
+A (1, 2) = downtime
+A (1, 3) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -194,4 +200,20 @@ NFR = 0.2
 % hybrid
 % pro-hybrid
 
+prefix = "M4G_R14W14_acc100_r1"
+
+figure;
+%output = strcat(prefix, ".bw");
+output = prefix
+x = 1:1:length(A);
+%plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
+plot(A(:,2:3));
+xlabel('ITERATION');
+ylabel('THROUGHPUT (MB/s)');
+legend('AGGREGATE', 'PER VM');
+%legend('AGGREGATE', 'INDIVIDUAL');
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
 
