@@ -228,7 +228,7 @@ output = strcat(prefix, ".tt");
 %output = prefix
 x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 x = {'', 'PRE', 'POST', 'HYBR', 'PROH', ''};
-x = {'', 'PRE', 'POST', 'HYBR', 'PROH'};
+x = {'PRE', 'POST', 'HYBR', 'PROH'};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
