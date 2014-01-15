@@ -67,8 +67,8 @@ totaldata += scsent
 NFR = 0
 
 A (1, 1) = totaltime
-A (1, 2) = downtime
-A (1, 3) = totaldata
+A (2, 1) = downtime
+A (3, 1) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -93,9 +93,9 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (2, 1) = totaltime
+A (1, 2) = totaltime
 A (2, 2) = downtime
-A (2, 3) = totaldata
+A (3, 2) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hybrid copy migration
@@ -128,8 +128,8 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (3, 1) = totaltime
-A (3, 2) = downtime
+A (1, 3) = totaltime
+A (2, 3) = downtime
 A (3, 3) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,9 +202,9 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (4, 1) = totaltime
-A (4, 2) = downtime
-A (4, 3) = totaldata
+A (1, 4) = totaltime
+A (2, 4) = downtime
+A (3, 4) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%%%%
 % precopy
