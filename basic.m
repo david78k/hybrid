@@ -37,7 +37,7 @@ totaltime = 0;
 downtime = 0;
 totaldata = 0;
 
-A = zeros(4, 3)
+A = zeros(4, 3);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % precopy migration
@@ -66,9 +66,9 @@ totaldata += scsent
 % network fault rate
 NFR = 0
 
-A (1, 1) = totaltime
-A (2, 1) = downtime
-A (3, 1) = totaldata
+A (1, 1) = totaltime;
+A (2, 1) = downtime;
+A (3, 1) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -93,9 +93,9 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (1, 2) = totaltime
-A (2, 2) = downtime
-A (3, 2) = totaldata
+A (1, 2) = totaltime;
+A (2, 2) = downtime;
+A (3, 2) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hybrid copy migration
@@ -128,9 +128,9 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (1, 3) = totaltime
-A (2, 3) = downtime
-A (3, 3) = totaldata
+A (1, 3) = totaltime;
+A (2, 3) = downtime;
+A (3, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % proactive hybrid copy migration
@@ -202,8 +202,8 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (1, 4) = totaltime
-A (2, 4) = downtime
+A (1, 4) = totaltime;
+A (2, 4) = downtime;
 A (3, 4) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%%%%
@@ -217,13 +217,15 @@ prefix = "M4G_R14W14_acc100_r1"
 figure;
 %output = strcat(prefix, ".bw");
 output = prefix
-x = 1:1:length(A);
+x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
+%x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
-plot(A(:,2));
+%plot(A(:,2));
 xlabel('COPY METHOD');
 ylabel('TIME or KB');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %legend('AGGREGATE', 'INDIVIDUAL');
+bar(A(:,2))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
