@@ -33,7 +33,7 @@ mem = zeros(1, numpages);
 acc = 1
 %acc = 0
 
-fontsize = 20
+fontsize = 18
 
 totaltime = 0;
 downtime = 0;
