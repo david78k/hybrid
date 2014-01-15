@@ -230,9 +230,9 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 bar(A(:,1))
-set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize)
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
 xlabel('COPY METHOD', 'FontSize', fontsize);
-ylabel('TIME', 'FontSize', fontsize);
+ylabel('TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %bar(x, A(:,1))
 
@@ -244,7 +244,9 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".dt");
 
-ylabel('TIME');
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
+xlabel('COPY METHOD', 'FontSize', fontsize);
+ylabel('TIME (SEC)', 'FontSize', fontsize);
 
 bar(A(:,2))
 
@@ -256,7 +258,9 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".td");
 
-ylabel('KB');
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
+xlabel('COPY METHOD', 'FontSize', fontsize);
+ylabel('SIZE (KB)', 'FontSize', fontsize);
 
 bar(A(:,3))
 
