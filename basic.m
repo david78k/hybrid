@@ -232,7 +232,7 @@ x = {'', 'PRE', 'POST', 'HYBR', 'PROH', ''};
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 
-xtics = 1:10;
+xtics = 1:10
 bar(xtics, A(:,1))
 set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
