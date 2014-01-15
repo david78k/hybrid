@@ -227,7 +227,7 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
-xlabel('COPY METHOD');
+xlabel('COPY METHOD', FontSize, '14');
 ylabel('TIME');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 bar(A(:,1))
