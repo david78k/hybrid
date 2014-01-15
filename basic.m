@@ -217,7 +217,7 @@ prefix = "M4G_R14W14_acc100_r1"
 figure;
 %output = strcat(prefix, ".bw");
 output = prefix
-x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
+x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
