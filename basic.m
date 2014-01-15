@@ -225,9 +225,9 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 xlabel('COPY METHOD');
-ylabel('TIME or KB');
+ylabel('TIME');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
-bar(x, A(:,:))
+bar(x, A(:,1))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
@@ -239,7 +239,7 @@ output = strcat(prefix, ".dt");
 
 ylabel('TIME or KB');
 
-bar(x, A(:,:))
+bar(x, A(:,2))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
