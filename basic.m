@@ -225,7 +225,7 @@ xlabel('COPY METHOD');
 ylabel('TIME or KB');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %legend('AGGREGATE', 'INDIVIDUAL');
-bar(A(:,2))
+bar(A(:,:))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
