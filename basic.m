@@ -244,11 +244,11 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".dt");
 
-set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TIME (SEC)', 'FontSize', fontsize);
 
 bar(A(:,2))
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
@@ -258,11 +258,11 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".td");
 
-set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('SIZE (KB)', 'FontSize', fontsize);
 
 bar(A(:,3))
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''}, 'FontSize', fontsize - 2)
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
