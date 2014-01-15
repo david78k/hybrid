@@ -34,6 +34,7 @@ acc = 1
 %acc = 0
 
 fontsize = 18
+fontsize = 20
 
 totaltime = 0;
 downtime = 0;
@@ -230,7 +231,9 @@ x = {'', 'PRE', 'POST', 'HYBR', 'PROH', ''};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
-bar(A(:,1))
+
+xtics = 1:10;
+bar(xtics, A(:,1))
 set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TIME (SEC)', 'FontSize', fontsize);
