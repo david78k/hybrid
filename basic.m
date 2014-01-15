@@ -67,8 +67,8 @@ totaldata += scsent
 NFR = 0
 
 A (1, 1) = totaltime;
-A (2, 1) = downtime;
-A (3, 1) = totaldata;
+A (1, 2) = downtime;
+A (1, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -93,9 +93,9 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (1, 2) = totaltime;
+A (2, 1) = totaltime;
 A (2, 2) = downtime;
-A (3, 2) = totaldata;
+A (2, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hybrid copy migration
@@ -128,8 +128,8 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (1, 3) = totaltime;
-A (2, 3) = downtime;
+A (3, 1) = totaltime;
+A (3, 2) = downtime;
 A (3, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,21 +202,24 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (1, 4) = totaltime;
-A (2, 4) = downtime;
-A (3, 4) = totaldata
+A (4, 1) = totaltime;
+A (4, 2) = downtime;
+A (4, 3) = totaldata
 
-%%%%%%%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     plotting
 % precopy
 % postcopy
 % hybrid
 % pro-hybrid
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 prefix = "M4G_R14W14_acc100_r1"
 
+%%%%%%%%%%%%%%%%%%%% total time %%%%%%%%%%%%%%%%%%%%%%
 figure;
-%output = strcat(prefix, ".bw");
-output = prefix
+output = strcat(prefix, ".tt");
+%output = prefix
 x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
@@ -224,10 +227,22 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 xlabel('COPY METHOD');
 ylabel('TIME or KB');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
-%legend('AGGREGATE', 'INDIVIDUAL');
 bar(x, A(:,:))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
 saveas (1, strcat(output, ".emf"));
+
+%%%%%%%%%%%%%%%%%%%% downtime %%%%%%%%%%%%%%%%%%%%%%
+figure;
+output = strcat(prefix, ".dt");
+
+ylabel('TIME or KB');
+
+bar(x, A(:,:))
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
+
 
