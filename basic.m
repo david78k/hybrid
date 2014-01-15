@@ -219,10 +219,10 @@ figure;
 output = prefix
 x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
-plot(A(:,:));
+plot(A(:,2));
 xlabel('COPY METHOD');
 ylabel('TIME or KB');
-legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
+%legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %legend('AGGREGATE', 'INDIVIDUAL');
 
 saveas (1, strcat(output, ".png"));
