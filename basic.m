@@ -34,7 +34,7 @@ acc = 1
 %acc = 0
 
 fontsize = 18
-fontsize = 20
+%fontsize = 20
 
 totaltime = 0;
 downtime = 0;
@@ -228,13 +228,14 @@ output = strcat(prefix, ".tt");
 %output = prefix
 x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 x = {'', 'PRE', 'POST', 'HYBR', 'PROH', ''};
+x = {'', 'PRE', 'POST', 'HYBR', 'PROH'};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 
 %xtics = 1:4:16
 %bar(xtics, A(:,1))
-bar(A(:,1), Gap = [0.3] )
+bar(A(:,1))
 set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TIME (SEC)', 'FontSize', fontsize);
