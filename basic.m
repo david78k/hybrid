@@ -228,7 +228,7 @@ x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 bar(A(:,1))
-set(gca, 'XTickLabel', {'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'})
+set(gca, 'XTickLabel', {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''})
 xlabel('COPY METHOD', 'FontSize', 14);
 ylabel('TIME');
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
