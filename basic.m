@@ -59,7 +59,7 @@ end
 % stop-and-copy phase
 % stop conditions: 29 iterations, 50 pages, 4 memory size sent
 scsent = scinfo + present * pagesize
-downtwime = scsent / b
+downtime = scsent / b
 totaltime += downtime
 totaldata += scsent
 
@@ -114,7 +114,7 @@ totaldata += present
 
 % stop-and-copy phase
 scsent = scinfo 
-downtwime = scsent / b
+downtime = scsent / b
 totaltime += downtime
 totaldata += scsent
 
@@ -217,7 +217,7 @@ A (4, 3) = totaldata
 
 prefix = "M4G_R14W14_acc100_r1"
 
-dlmwrite (prefix, A)
+dlmwrite (prefix, A, ' ')
 
 %%%%%%%%%%%%%%%%%%%% total time %%%%%%%%%%%%%%%%%%%%%%
 figure;
@@ -241,9 +241,21 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".dt");
 
-ylabel('TIME or KB');
+ylabel('TIME');
 
 bar(A(:,2))
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
+
+%%%%%%%%%%%%%%%%%%%% total data %%%%%%%%%%%%%%%%%%%%%%
+figure;
+output = strcat(prefix, ".td");
+
+ylabel('KB');
+
+bar(A(:,3))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
