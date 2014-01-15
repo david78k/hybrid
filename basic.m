@@ -226,12 +226,12 @@ figure;
 output = strcat(prefix, ".tt");
 %output = prefix
 x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
-x = ['PRE', 'POST', 'HYBR', 'PROH'];
+x = ['', 'PRE', 'POST', 'HYBR', 'PROH', ''];
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 bar(A(:,1))
-set(gca, 'XTickLabel', {'', x, ''}, 'FontSize', fontsize - 2)
+set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
