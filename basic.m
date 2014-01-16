@@ -16,7 +16,7 @@ prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
 % prediction accuracy 0 through 1
-acc = 1
+acc = 0
 
 pagesize = 4 % in KB
 numpages = r / pagesize
@@ -125,7 +125,7 @@ totaltime += pretime
 totaldata += present
 
 % stop-and-copy phase
-bitmapsize = 500 % KB
+bitmapsize = numpages * dirtyrate/8/1024 % KB
 scsent = scinfo + bitmapsize
 downtime = scsent / b
 totaltime += downtime
@@ -201,7 +201,7 @@ function [tt, dt, td] = prohybrid(acc)
 
 	% stop-and-copy phase
 	% send the CPU and device states
-	bitmapsize = 500 % KB
+	bitmapsize = numpages * dirtyrate / 8 / 1024 % KB
 	scsent = scinfo + bitmapsize
 	downtime = scsent/b
 	totaltime += downtime
@@ -226,7 +226,7 @@ A (4, 1) = totaltime;
 A (4, 2) = downtime;
 A (4, 3) = totaldata;
 
-acc = 0.75
+acc = 0.25
 prohybrid(acc);
 A (5, 1) = totaltime;
 A (5, 2) = downtime;
@@ -238,13 +238,13 @@ A (6, 1) = totaltime;
 A (6, 2) = downtime;
 A (6, 3) = totaldata;
 
-acc = 0.25
+acc = 0.75
 prohybrid(acc);
 A (7, 1) = totaltime;
 A (7, 2) = downtime;
 A (7, 3) = totaldata;
 
-acc = 0
+acc = 1
 prohybrid(acc);
 A (8, 1) = totaltime;
 A (8, 2) = downtime;
