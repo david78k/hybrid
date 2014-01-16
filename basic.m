@@ -149,7 +149,7 @@ fprintf('\n')
 disp('=============== Proactive hybrid copy migration ================')
 
 function f = prohybrid(acc)
-global wss, numpages, readrate, pagesize, b, scinfo
+global wss numpages readrate pagesize b scinfo
 
 totaltime = 0;
 downtime = 0;
