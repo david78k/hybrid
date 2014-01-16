@@ -279,7 +279,7 @@ xintervals = 1:2:length(x);
 %xtics = 1:4:16
 %bar(xtics, A(:,1))
 %bar(A(:,1), XTicksLabelStyle = Diagonal)
-bar(xintervals, (:,1))
+bar(xintervals, A(:,1))
 set(gca, 'XTick', 1:2:16, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
