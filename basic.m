@@ -3,16 +3,14 @@
 r = 4096
 r *= 1024 % convert to KB
 
-% bandwidth in gbps
-b = 1000 
-b = b * 1024/8 % convert to KB
-
 % page dirty rate in percent (%): against to total memory pages
-dirtyrate = 14 
+dirtyrate = 50 
 dirtyrate /= 100
 
-readrate = 14
+readrate = 0
 readrate /= 100
+
+run = 1
 
 pagesize = 4 % in KB
 numpages = r / pagesize
@@ -32,6 +30,10 @@ mem = zeros(1, numpages);
 % prediction accuracy 0 through 1
 acc = 1
 %acc = 0
+
+% bandwidth in gbps
+b = 1000 
+b = b * 1024/8 % convert to KB
 
 fontsize = 18
 %fontsize = 20
@@ -218,7 +220,10 @@ A (4, 3) = totaldata
 % pro-hybrid
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-prefix = "M4G_R14W14_acc100_r1"
+%prefix = "M4G_R14W14_acc100_r1"
+prefix = strcat ("M4G_R", readrate, "W", dirtyrate, "acc", accuracy, "r", run)
+%prefix = strcat (prefix, "W")
+%prefix = strcat (prefix, dirtyrate)
 
 dlmwrite (prefix, A, ' ')
 
