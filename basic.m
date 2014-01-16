@@ -150,6 +150,7 @@ disp('=============== Proactive hybrid copy migration ================')
 
 function f = prohybrid(acc)
 global wss numpages readrate dirtyrate pagesize b scinfo
+global totaltime downtime totaldata
 
 totaltime = 0;
 downtime = 0;
