@@ -8,7 +8,7 @@ readrate = 50
 prefix = strcat ("M4G_R", num2str(readrate))
 readrate /= 100
 
-dirtyrate = 0 
+dirtyrate = 50 
 prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
