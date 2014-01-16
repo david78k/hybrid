@@ -13,9 +13,7 @@ prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
 % prediction accuracy 0 through 1
-acc = 0.5
-%acc = 1
-%acc = 0
+acc = 1
 
 pagesize = 4 % in KB
 numpages = r / pagesize
@@ -149,6 +147,8 @@ A (3, 3) = totaldata;
 %disp(char(10))
 fprintf('\n')
 disp('=============== Proactive hybrid copy migration ================')
+
+function f = prohybrid(acc)
 totaltime = 0;
 downtime = 0;
 totaldata = 0;
@@ -209,13 +209,35 @@ postsent = (numpages - pred_pages - pred_dirts) * pagesize
 posttime = postsent/b
 totaltime += posttime
 totaldata += postsent
+end
 
 % network fault rate
 NFR = 0.2
 
 A (4, 1) = totaltime;
 A (4, 2) = downtime;
-A (4, 3) = totaldata
+A (4, 3) = totaldata;
+
+acc = 0.75
+prohybrid(acc);
+A (5, 1) = totaltime;
+A (5, 2) = downtime;
+A (5, 3) = totaldata;
+
+acc = 0.5
+A (6, 1) = totaltime;
+A (6, 2) = downtime;
+A (6, 3) = totaldata;
+
+acc = 0.25
+A (7, 1) = totaltime;
+A (7, 2) = downtime;
+A (7, 3) = totaldata;
+
+acc = 0
+A (8, 1) = totaltime;
+A (8, 2) = downtime;
+A (8, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                     plotting
