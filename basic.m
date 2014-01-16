@@ -271,6 +271,7 @@ output = strcat(prefix, ".tt");
 %output = prefix
 %x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+x = {'1', '2', '3', '4', '5', '6', '7', '8'};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
@@ -279,7 +280,7 @@ x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
 %bar(xtics, A(:,1))
 %bar(A(:,1), XTicksLabelStyle = Diagonal)
 bar(A(:,1))
-set(gca, 'XTick', 1:1.5:8, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
