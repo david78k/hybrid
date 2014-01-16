@@ -281,7 +281,8 @@ xintervals = 1:xinterval:xinterval*length(x);
 %bar(xtics, A(:,1))
 %bar(A(:,1), XTicksLabelStyle = Diagonal)
 bar(xintervals, A(:,1))
-set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTick', 1:24, 'XTickLabel', x, 'FontSize', fontsize)
+%set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
