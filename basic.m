@@ -41,7 +41,8 @@ run = 1
 b = 1000 
 b = b * 1024/8 % convert to KB
 
-fontsize = 18
+fontsize = 16
+%fontsize = 18
 %fontsize = 20
 
 totaltime = 0;
