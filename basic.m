@@ -56,13 +56,13 @@ A = zeros(4, 3);
 fprintf('\n')
 disp('==================== Precopy migration ====================')
 % iterations
-present = numpages
+present = numpages * pagesize
 iter = 0
 while present > 50 && iter < 29 && totaldata < 4*r
-	pretime = present * pagesize / b
+	pretime = present / b
 	totaltime += pretime
 	totaldata += present
-	present = numpages * dirtyrate
+	present = numpages * pagesize * dirtyrate 
 	%dirts = wss * dirtyrate
 	iter += 1
 end
