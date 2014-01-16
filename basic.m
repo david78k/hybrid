@@ -278,7 +278,7 @@ x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
 %xtics = 1:4:16
 %bar(xtics, A(:,1))
 bar(A(:,1), XTicksLabelStyle = Diagonal)
-set(gca, 'XTick', 1:2:8, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTick', 1:1.5:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
