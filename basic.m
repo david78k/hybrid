@@ -274,7 +274,7 @@ x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
 %x = {'1', '2', '3', '4', '5', '6', '7', '8'};
 xinterval = 3
 %xintervals = 1:xinterval:(xinterval*length(x));
-xintervals = 1:3:3*length(x);
+xintervals = -2:3:3*length(x);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 
