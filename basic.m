@@ -321,7 +321,7 @@ bar(xintervals, A(:,3))
 %set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
-ylabel('TOTAL DATA TRANSFERRED (KB)', 'FontSize', fontsize);
+ylabel('TOTAL DATA (KB)', 'FontSize', fontsize);
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
