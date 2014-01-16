@@ -59,7 +59,7 @@ disp('==================== Precopy migration ====================')
 present = numpages
 iter = 0
 while present > 50 && iter < 29 && totaldata < 4*r
-	pretime = present / b
+	pretime = present * pagesize / b
 	totaltime += pretime
 	totaldata += present
 	present = numpages * dirtyrate
