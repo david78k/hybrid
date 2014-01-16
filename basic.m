@@ -1,4 +1,7 @@
 % basic hybrid copy migration
+	global wss numpages readrate dirtyrate pagesize b scinfo
+	global totaltime downtime totaldata
+
 % memory size in MB
 r = 4096
 r *= 1024 % convert to KB
@@ -149,8 +152,8 @@ fprintf('\n')
 disp('=============== Proactive hybrid copy migration ================')
 
 function [tt, dt, td] = prohybrid(acc)
-	global wss numpages readrate dirtyrate pagesize b scinfo
-	global totaltime downtime totaldata
+%	global wss numpages readrate dirtyrate pagesize b scinfo
+%	global totaltime downtime totaldata
 
 	totaltime = 0;
 	downtime = 0;
