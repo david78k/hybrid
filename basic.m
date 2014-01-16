@@ -13,7 +13,7 @@ prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
 % prediction accuracy 0 through 1
-acc = 0.2
+acc = 0.5
 %acc = 1
 %acc = 0
 
