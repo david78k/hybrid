@@ -299,7 +299,7 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".dt");
 
-bar(A(:,2))
+bar(xintervals, A(:,2))
 set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
@@ -312,7 +312,7 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".td");
 
-bar(A(:,3))
+bar(xintervals, A(:,3))
 set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL DATA TRANSFERRED (KB)', 'FontSize', fontsize);
