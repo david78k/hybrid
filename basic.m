@@ -149,12 +149,12 @@ fprintf('\n')
 disp('=============== Proactive hybrid copy migration ================')
 
 function f = prohybrid(acc)
-global wss numpages readrate dirtyrate pagesize b scinfo
-global totaltime downtime totaldata
+	global wss numpages readrate dirtyrate pagesize b scinfo
+	global totaltime downtime totaldata
 
-totaltime = 0;
-downtime = 0;
-totaldata = 0;
+	totaltime = 0;
+	downtime = 0;
+	totaldata = 0;
 
 % precopy phase
 % LRU, PFR
@@ -183,35 +183,35 @@ totaldata = 0;
 %write_rate = 0.04 % 4% of total memory
 % simple case: readonly pages (RO) - zero dirtied pages 
 %RO = 0.3
-pred_pages = numpages * readrate * acc
+	pred_pages = numpages * readrate * acc
 
 % LRU
 % for LRU queue
 % 	mark sent
 %	insert the pages into cache and perform delta compression
 
-present = pred_pages * pagesize
-pretime = present/b
-totaltime += pretime
-totaldata += present
+	present = pred_pages * pagesize
+	pretime = present/b
+	totaltime += pretime
+	totaldata += present
 
-% stop-and-copy phase
-% send the CPU and device states
-bitmapsize = 500 % KB
-scsent = scinfo + bitmapsize
-downtime = scsent/b
-totaltime += downtime
-totaldata += scsent
+	% stop-and-copy phase
+	% send the CPU and device states
+	bitmapsize = 500 % KB
+	scsent = scinfo + bitmapsize
+	downtime = scsent/b
+	totaltime += downtime
+	totaldata += scsent
 
-% postcopy phase
-postsent = (numpages - pred_pages) * pagesize
+	% postcopy phase
+	postsent = (numpages - pred_pages) * pagesize
 
-% exclude the predicted dirtied pages 
-pred_dirts = numpages * dirtyrate * acc
-postsent = (numpages - pred_pages - pred_dirts) * pagesize
-posttime = postsent/b
-totaltime += posttime
-totaldata += postsent
+	% exclude the predicted dirtied pages 
+	pred_dirts = numpages * dirtyrate * acc
+	postsent = (numpages - pred_pages - pred_dirts) * pagesize
+	posttime = postsent/b
+	totaltime += posttime
+	totaldata += postsent
 end
 
 % network fault rate
@@ -265,8 +265,7 @@ figure;
 output = strcat(prefix, ".tt");
 %output = prefix
 x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
-x = {'', 'PRE', 'POST', 'HYBR', 'PROH', ''};
-x = {'', 'PRE', 'POST', 'HYBR', 'PROH'};
+x = {'', 'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
