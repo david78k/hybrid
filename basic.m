@@ -280,7 +280,7 @@ dlmwrite (prefix, A, ' ')
 figure;
 output = strcat(prefix, ".tt");
 %output = prefix
-x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
+%x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 x = {'', 'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
