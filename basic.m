@@ -9,7 +9,7 @@ prefix = strcat ("M4G_R", num2str(readrate))
 readrate /= 100
 
 dirtyrate = 50 
-prefix = strcat (prefix, "W", num2str(dirtyrate))
+prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
 run = 1
@@ -35,7 +35,7 @@ acc = 1
 
 run = 1
 
-prefix = strcat (prefix, "acc", num2str(acc), "r", num2str(run))
+prefix = strcat (prefix, "_acc", num2str(acc), "_r", num2str(run))
 
 % bandwidth in gbps
 b = 1000 
