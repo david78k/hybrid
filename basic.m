@@ -293,7 +293,7 @@ figure;
 output = strcat(prefix, ".dt");
 
 bar(A(:,2))
-set(gca, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
 
@@ -306,7 +306,7 @@ figure;
 output = strcat(prefix, ".td");
 
 bar(A(:,3))
-set(gca, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL DATA TRANSFERRED (KB)', 'FontSize', fontsize);
 
