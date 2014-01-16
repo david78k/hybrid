@@ -12,7 +12,10 @@ dirtyrate = 100
 prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
-run = 1
+% prediction accuracy 0 through 1
+acc = 0.2
+%acc = 1
+%acc = 0
 
 pagesize = 4 % in KB
 numpages = r / pagesize
@@ -28,11 +31,6 @@ wss = numpages * 0.25
 
 % 0: zero, 1: read, 2: dirtied, 3: inactive data
 mem = zeros(1, numpages);
-
-% prediction accuracy 0 through 1
-acc = 0.8
-%acc = 1
-%acc = 0
 
 run = 1
 
