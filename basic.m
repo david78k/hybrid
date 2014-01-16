@@ -41,7 +41,7 @@ run = 1
 b = 1000 
 b = b * 1024/8 % convert to KB
 
-fontsize = 16
+fontsize = 10
 %fontsize = 18
 %fontsize = 20
 
