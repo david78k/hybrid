@@ -5,11 +5,11 @@ r *= 1024 % convert to KB
 
 % page dirty rate in percent (%): against to total memory pages
 readrate = 0
-prefix = strcat ("M4G_R", readrate)
+prefix = strcat ("M4G_R", num2str(readrate))
 readrate /= 100
 
 dirtyrate = 50 
-prefix = strcat (prefix, "W", dirtyrate)
+prefix = strcat (prefix, "W", num2str(dirtyrate))
 dirtyrate /= 100
 
 run = 1
@@ -35,7 +35,7 @@ acc = 1
 
 run = 1
 
-prefix = strcat (prefix, "acc", acc, "r", run)
+prefix = strcat (prefix, "acc", num2str(acc), "r", num2str(run))
 
 % bandwidth in gbps
 b = 1000 
