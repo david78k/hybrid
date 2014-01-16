@@ -7,11 +7,11 @@ r = 4096
 r *= 1024 % convert to KB
 
 % page dirty rate in percent (%): against to total memory pages
-readrate = 100
+readrate = 50
 prefix = strcat ("M4G_R", num2str(readrate))
 readrate /= 100
 
-dirtyrate = 0 
+dirtyrate = 50 
 prefix = strcat (prefix, "_W", num2str(dirtyrate))
 dirtyrate /= 100
 
