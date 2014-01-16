@@ -270,7 +270,8 @@ figure;
 output = strcat(prefix, ".tt");
 %output = prefix
 %x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
-x = {'', 'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+%x = {'', 'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+x = {'', '1', '2', '3', '4', '5', '6', '7', '8'};
 %x = 1:1:length(A);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
@@ -280,7 +281,7 @@ x = {'', 'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'
 bar(A(:,1))
 set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
-ylabel('TIME (SEC)', 'FontSize', fontsize);
+ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %bar(x, A(:,1))
 
@@ -295,7 +296,7 @@ output = strcat(prefix, ".dt");
 bar(A(:,2))
 set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
-ylabel('TIME (SEC)', 'FontSize', fontsize);
+ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
@@ -308,7 +309,7 @@ output = strcat(prefix, ".td");
 bar(A(:,3))
 set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
-ylabel('SIZE (KB)', 'FontSize', fontsize);
+ylabel('TOTAL DATA TRANSFERRED (KB)', 'FontSize', fontsize);
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
