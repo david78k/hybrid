@@ -283,9 +283,11 @@ xintervals = 1:xinterval:(xinterval*length(x));
 %xtics = 1:4:16
 %bar(xtics, A(:,1))
 %bar(A(:,1), XTicksLabelStyle = Diagonal)
-bar(xintervals, A(:,1))
+%bar(xintervals, A(:,1))
+bar(A(:,1))
 %set(gca, 'XTick', 1:4:32, 'XTickLabel', x, 'FontSize', fontsize)
-set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
+%set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
@@ -299,7 +301,8 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".dt");
 
-bar(xintervals, A(:,2))
+bar(A(:,2))
+%bar(xintervals, A(:,2))
 set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
@@ -312,7 +315,8 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".td");
 
-bar(xintervals, A(:,3))
+bar(A(:,3))
+%bar(xintervals, A(:,3))
 set(gca, 'XTick', 1:8, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('TOTAL DATA TRANSFERRED (KB)', 'FontSize', fontsize);
