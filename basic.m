@@ -32,7 +32,7 @@ mem = zeros(1, numpages);
 
 run = 1
 
-prefix = strcat (prefix, "_acc", num2str(acc), "_r", num2str(run))
+%prefix = strcat (prefix, "_acc", num2str(acc), "_r", num2str(run))
 
 % bandwidth in gbps
 b = 1000 
