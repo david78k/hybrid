@@ -221,7 +221,7 @@ A (4, 3) = totaldata
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %prefix = "M4G_R14W14_acc100_r1"
-prefix = strcat ("M4G_R", readrate, "W", dirtyrate, "acc", accuracy, "r", run)
+prefix = strcat ("M4G_R", readrate, "W", dirtyrate, "acc", acc, "r", run)
 %prefix = strcat (prefix, "W")
 %prefix = strcat (prefix, dirtyrate)
 
