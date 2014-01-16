@@ -216,10 +216,6 @@ function [tt, dt, td] = prohybrid(acc)
 	posttime = postsent/b
 	totaltime += posttime
 	totaldata += postsent
-	
-	tt = totaltime;
-	dt = downtime;
-	td = totaldata;	
 end
 
 % network fault rate
@@ -229,25 +225,18 @@ prohybrid(acc)
 A (4, 1) = totaltime;
 A (4, 2) = downtime;
 A (4, 3) = totaldata;
-%A (4, :) = prohybrid(acc)
 
 acc = 0.75
 prohybrid(acc);
 A (5, 1) = totaltime;
 A (5, 2) = downtime;
 A (5, 3) = totaldata;
-%A (5, :) = prohybrid(acc);
-%row = prohybrid(acc);
-%A (5, 1) = row(1);
-%A (5, 2) = row(2);
-%A (5, 3) = row(3);
 
 acc = 0.5
 prohybrid(acc);
 A (6, 1) = totaltime;
 A (6, 2) = downtime;
 A (6, 3) = totaldata;
-%A (6, :) = prohybrid(acc);
 
 acc = 0.25
 prohybrid(acc);
