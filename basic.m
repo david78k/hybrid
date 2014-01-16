@@ -224,7 +224,8 @@ NFR = 0.2
 A (4, 1) = totaltime;
 A (4, 2) = downtime;
 A (4, 3) = totaldata;
-A (4, :) = prohybrid(acc)
+prohybrid(acc)
+%A (4, :) = prohybrid(acc)
 
 acc = 0.75
 A (5, 1) = totaltime;
