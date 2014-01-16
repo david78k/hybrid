@@ -45,7 +45,7 @@ totaltime = 0;
 downtime = 0;
 totaldata = 0;
 
-A = zeros(4, 3);
+A = zeros(, 3);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % precopy migration
