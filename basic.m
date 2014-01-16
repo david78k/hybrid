@@ -227,16 +227,19 @@ A (5, 2) = downtime;
 A (5, 3) = totaldata;
 
 acc = 0.5
+prohybrid(acc);
 A (6, 1) = totaltime;
 A (6, 2) = downtime;
 A (6, 3) = totaldata;
 
 acc = 0.25
+prohybrid(acc);
 A (7, 1) = totaltime;
 A (7, 2) = downtime;
 A (7, 3) = totaldata;
 
 acc = 0
+prohybrid(acc);
 A (8, 1) = totaltime;
 A (8, 2) = downtime;
 A (8, 3) = totaldata;
