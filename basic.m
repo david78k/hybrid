@@ -270,7 +270,8 @@ figure;
 output = strcat(prefix, ".tt");
 %output = prefix
 %x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
-x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+%x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+x = {'PR', 'PO', 'HB', '100', '75', '50', '25', '0'};
 %x = {'1', '2', '3', '4', '5', '6', '7', '8'};
 xinterval = 3
 %xintervals = 1:xinterval:(xinterval*length(x));
