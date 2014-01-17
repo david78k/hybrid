@@ -49,7 +49,7 @@ totaltime = 0;
 downtime = 0;
 totaldata = 0;
 
-numrows = 7;
+numrows = 8;
 A = zeros(numrows, 3);
 row = 1;
 
@@ -107,7 +107,7 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-%row ++
+row ++
 A (row, 1) = totaltime;
 A (row, 2) = downtime;
 A (row, 3) = totaldata;
