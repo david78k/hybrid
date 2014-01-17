@@ -215,7 +215,8 @@ function [tt, dt, td] = prohybrid(acc)
 	postsent = (numpages - pred_pages) * pagesize
 
 	% exclude the predicted dirtied pages 
-	pred_dirts = numpages * dirtyrate * acc
+	%pred_dirts = numpages * dirtyrate * acc
+	pred_dirts = 0;
 	postsent = (numpages - pred_pages - pred_dirts) * pagesize
 	posttime = postsent/b
 	totaltime += posttime
