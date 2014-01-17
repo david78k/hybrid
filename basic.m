@@ -107,7 +107,7 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-row ++
+%row ++
 A (row, 1) = totaltime;
 A (row, 2) = downtime;
 A (row, 3) = totaldata;
