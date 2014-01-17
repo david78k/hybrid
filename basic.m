@@ -49,7 +49,9 @@ totaltime = 0;
 downtime = 0;
 totaldata = 0;
 
-A = zeros(8, 3);
+numrows = 7;
+A = zeros(numrows, 3);
+row = 1;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % precopy migration
@@ -78,9 +80,9 @@ totaldata += scsent
 % network fault rate
 NFR = 0
 
-A (1, 1) = totaltime;
-A (1, 2) = downtime;
-A (1, 3) = totaldata;
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postcopy migration
@@ -105,9 +107,10 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (2, 1) = totaltime;
-A (2, 2) = downtime;
-A (2, 3) = totaldata;
+row ++
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hybrid copy migration
@@ -141,9 +144,10 @@ totaldata += postsent
 % network fault rate
 NFR = 0.2
 
-A (3, 1) = totaltime;
-A (3, 2) = downtime;
-A (3, 3) = totaldata;
+row ++
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % proactive hybrid copy migration
@@ -221,34 +225,34 @@ end
 % network fault rate
 NFR = 0.2
 
-prohybrid(acc)
-A (4, 1) = totaltime;
-A (4, 2) = downtime;
-A (4, 3) = totaldata;
+prohybrid(acc); row ++;
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
-acc = 0.25
+acc = 0.25; row ++;
 prohybrid(acc);
-A (5, 1) = totaltime;
-A (5, 2) = downtime;
-A (5, 3) = totaldata;
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
 acc = 0.5
-prohybrid(acc);
-A (6, 1) = totaltime;
-A (6, 2) = downtime;
-A (6, 3) = totaldata;
+prohybrid(acc); row ++;
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
 acc = 0.75
-prohybrid(acc);
-A (7, 1) = totaltime;
-A (7, 2) = downtime;
-A (7, 3) = totaldata;
+prohybrid(acc); row ++;
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata;
 
 acc = 1
-prohybrid(acc);
-A (8, 1) = totaltime;
-A (8, 2) = downtime;
-A (8, 3) = totaldata
+prohybrid(acc); row ++;
+A (row, 1) = totaltime;
+A (row, 2) = downtime;
+A (row, 3) = totaldata
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                     plotting
