@@ -1,6 +1,9 @@
+#filename=basic.m
+filename=break_axis.m
+
 #octave basic.m --enable-64
-octave basic.m
+octave $filename
 
 git add .
-git commit -a -m basic.m
+git commit -a -m $filename
 git push
