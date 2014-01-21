@@ -1,5 +1,5 @@
 a=[1 6 4 300];
-xlabel = {'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'};
+xlabel = {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''};
 
 ylim1=[0 20];
 %ylim2=[100 300];
