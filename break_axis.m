@@ -19,18 +19,19 @@ box off;
 
 % create axis2
 %a2=axes('position',[p0(1)+p0(3)/2+.025 p0(2) p0(3)/2-.025 p0(4)]);
-%a2=axes('position',[p0(1) p0(4)/2+.145 p0(3) p0(4)/2])
-a2=axes('position',[p0(1) p0(4)/2 p0(3) p0(4)])
+a2=axes('position',[p0(1) p0(4)/2+.145 p0(3) p0(4)/2])
+%a2=axes('position',[p0(1) p0(4)/2 p0(3) p0(4)])
 %barh(a);
 bar(a);
 
 set(a2,'xlim',xlim,'ylim',ylim2);
 set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
-box off
+%box off
 
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
 output = "break_axis";
 
 saveas(1, strcat(output, ".png"));
 
+box off
