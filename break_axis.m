@@ -4,6 +4,7 @@ a=[1 3 6 4 5 30];
 ylim1=[0 20];
 ylim2=[100 300];
 ylim2=[1 300];
+ylim2=[10 30];
 xlim=[0 length(a)+1];
 
 figure;
