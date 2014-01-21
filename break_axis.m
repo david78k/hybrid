@@ -32,7 +32,7 @@ set(a2,'xtick',[]);
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
 output = "break_axis";
 
-figure;
+%figure;
 saveas(1, strcat(output, ".png"));
 
 box off
