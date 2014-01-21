@@ -1,11 +1,12 @@
 a=[1 6 4 300];
 x = {'', 'PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID', ''};
 
-fontsize = 14;
+fontsize = 18;
 
 ylim1=[0 20];
 %ylim2=[100 300];
-ylim2=[200 400];
+%ylim2=[200 400];
+ylim2=[200 350];
 xlim=[0 length(a)+1];
 
 figure;
@@ -21,7 +22,7 @@ a1=axes('position',[p0(1) p0(2) p0(3) p0(4)/2]);
 %barh(a);
 bar(a);
 %set(a1,'ylim',ylim1);
-set(a1,'ylim',ylim1, 'XTickLabel', x);
+set(a1,'ylim',ylim1, 'XTickLabel', x, 'FontSize', fontsize);
 xlabel('COPY METHOD', 'FontSize', fontsize);
 %ylabel('TIME', 'FontSize', fontsize);
 
@@ -40,7 +41,7 @@ set(a2,'ylim',ylim2);
 %set(a2,'xlim',xlim,'ylim',ylim2);
 set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
-ylabel('TIME', 'FontSize', fontsize);
+ylabel('TIME (sec)', 'FontSize', fontsize);
 %box off
 
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
