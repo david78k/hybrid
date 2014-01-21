@@ -41,7 +41,7 @@ a2=axes('position',[p0(1) p0(4)/2+.145 p0(3) p0(4)/2])
 bar(a);
 
 %set(a2,'ylim',ylim1);
-set(a2,'ylim',ylim2, 'FontSize', fontsize, 'YTick', [200:450:350]);
+set(a2,'ylim',ylim2, 'FontSize', fontsize, 'YTick', [200:50:350]);
 %ylim(ylim2);
 %set(a2,'xlim',xlim,'ylim',ylim2);
 set(a2,'xtick',[]);
