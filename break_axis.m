@@ -27,11 +27,11 @@ bar(a);
 set(a2,'xlim',xlim,'ylim',ylim2);
 set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
-%box off
+box off
 
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
 output = "break_axis";
 
 saveas(1, strcat(output, ".png"));
 
-box off
+%box off
