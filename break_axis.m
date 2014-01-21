@@ -20,6 +20,9 @@ a1=axes('position',[p0(1) p0(2) p0(3) p0(4)/2]);
 bar(a);
 %set(a1,'ylim',ylim1);
 set(a1,'ylim',ylim1, 'XTickLabel', xlabel);
+xlabel('COPY METHOD', 'FontSize', 14);
+ylabel('TIME');
+
 %box off;
 
 % create axis2
@@ -36,9 +39,6 @@ set(a2,'ylim',ylim2);
 set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
 %box off
-
-xlabel('COPY METHOD', 'FontSize', 14);
-ylabel('TIME');
 
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
 output = "break_axis";
