@@ -42,5 +42,7 @@ output = "break_axis";
 
 %figure;
 saveas(1, strcat(output, ".png"));
+saveas(1, strcat(output, ".emf"));
+saveas(1, strcat(output, ".eps"));
 
 %box off
