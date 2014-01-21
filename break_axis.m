@@ -1,4 +1,5 @@
-a=[1 3 6 4 5 300];
+a=[1 6 4 300];
+x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
 
 ylim1=[0 20];
 %ylim2=[100 300];
