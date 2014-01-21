@@ -35,4 +35,4 @@ output = "break_axis";
 %figure;
 saveas(1, strcat(output, ".png"));
 
-box off
+%box off
