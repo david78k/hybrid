@@ -37,6 +37,9 @@ set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
 %box off
 
+xlabel('COPY METHOD', 'FontSize', 14);
+ylabel('TIME');
+
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
 output = "break_axis";
 
