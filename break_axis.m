@@ -37,7 +37,6 @@ bar(a);
 %set(a2,'xcolor',get(a2,'color'));
 %box off
 
-bar(a);
 %%%%%%%%%%%%%%%% plotting %%%%%%%%%%%%%%%%%%%%%
 output = "break_axis";
 
