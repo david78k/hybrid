@@ -4,6 +4,8 @@ ylim1=[0 20];
 ylim2=[100 300];
 xlim=[0 length(a)+1];
 
+figure;
+
 % retrieve your default axis pos
 clf;
 p0=get(gca,'position')
