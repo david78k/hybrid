@@ -1,10 +1,8 @@
 a=[1 3 6 4 5 300];
-%a=[1 3 6 4 5 30];
 
 ylim1=[0 20];
-ylim2=[100 300];
-ylim2=[250 350];
-%ylim2=[10 50];
+%ylim2=[100 300];
+ylim2=[200 400];
 xlim=[0 length(a)+1];
 
 figure;
@@ -32,10 +30,10 @@ a2=axes('position',[p0(1) p0(4)/2+.145 p0(3) p0(4)/2])
 bar(a);
 
 %set(a2,'ylim',ylim1);
-%set(a2,'ylim',ylim2);
-ylim(ylim2);
+set(a2,'ylim',ylim2);
+%ylim(ylim2);
 %set(a2,'xlim',xlim,'ylim',ylim2);
-%set(a2,'xtick',[]);
+set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
 %box off
 
