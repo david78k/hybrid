@@ -30,8 +30,8 @@ a2=axes('position',[p0(1)+p0(3)/2+.025 p0(2) p0(3)/2-.025 p0(4)]);
 %barh(a);
 bar(a);
 
-%set(a2,'ylim',ylim1);
-set(a2,'ylim',ylim2);
+set(a2,'ylim',ylim1);
+%set(a2,'ylim',ylim2);
 %set(a2,'xlim',xlim,'ylim',ylim2);
 %set(a2,'xtick',[]);
 %set(a2,'xcolor',get(a2,'color'));
