@@ -6,7 +6,7 @@ fontsize = 18;
 ylim1=[0 20];
 %ylim2=[100 300];
 %ylim2=[200 400];
-ylim2=[200 320];
+ylim2=[200 310];
 xlim=[0 length(a)+1];
 
 figure;
