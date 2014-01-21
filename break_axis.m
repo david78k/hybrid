@@ -14,8 +14,8 @@ delete(gcf);
 a1=axes('position',[p0(1) p0(2) p0(3) p0(4)/2]);
 a2=axes('position',[p0(1) p0(4)/2+.145 p0(3) p0(4)/2])
 %barh(a);
-%bar(a);
-%set(a1,'ylim',ylim1);
+bar(a);
+set(a1,'ylim',ylim1);
 %set(a2,'xlim',xlim,'ylim',ylim2);
 %set(a2,'xtick',[]);
 %box off;
