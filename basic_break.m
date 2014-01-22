@@ -327,6 +327,7 @@ ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
 
 a2 = axes ('position', [p0(1) p0(4)/2+.15 p0(3) p0(4)/2]);
 bar(xintervals, A(:,2))
+set(a2, 'ylim', ylim2, 'FontSize', fontsize);
 set(a2, 'xtick', []);
 
 saveas (1, strcat(output, ".png"));
