@@ -287,7 +287,7 @@ figure;
 output = strcat(prefix, ".dt");
 
 ylim1 = [0 0.002];
-ylim2 = [60 70];
+ylim2 = [60 68];
 
 %cla;
 clf;
