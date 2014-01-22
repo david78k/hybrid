@@ -271,40 +271,6 @@ A (row, 3) = totaldata
 % write the matrix to file with delimiter white space
 dlmwrite (prefix, A, ' ')
 
-%%%%%%%%%%%%%%%%%%%% total time %%%%%%%%%%%%%%%%%%%%%%
-figure;
-output = strcat(prefix, ".tt");
-%output = prefix
-%x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
-%x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
-%x = {'PR', 'PO', 'HB', '100', '75', '50', '25', '0'};
-x = {'PR', 'PO', 'HB', '0', '25', '50', '75', '100'};
-%x = {'PO', 'HB', '0', '25', '50', '75', '100'};
-%x = {'1', '2', '3', '4', '5', '6', '7', '8'};
-xinterval = 2
-xintervals = 1:xinterval:(xinterval*length(x));
-%xintervals = 1:3:3*length(x);
-%xintervals = 1:4:4*length(x);
-%plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
-%plot(A(:,2));
-
-%xtics = 1:4:16
-%bar(xtics, A(:,1))
-%bar(A(:,1), XTicksLabelStyle = Diagonal)
-bar(xintervals, A(:,1))
-%bar(A(:,1))
-%set(gca, 'XTick', 1:4:32, 'XTickLabel', x, 'FontSize', fontsize)
-set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
-%set(gca, 'XTickLabel', x, 'FontSize', fontsize)
-xlabel('COPY METHOD', 'FontSize', fontsize);
-%ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
-%legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
-%bar(x, A(:,1))
-
-saveas (1, strcat(output, ".png"));
-saveas (1, strcat(output, ".eps"));
-saveas (1, strcat(output, ".emf"));
-
 %%%%%%%%%%%%%%%%%%%% downtime %%%%%%%%%%%%%%%%%%%%%%
 figure;
 output = strcat(prefix, ".dt");
@@ -333,6 +299,40 @@ bar(xintervals, A(:,2))
 set(a2, 'ylim', ylim2, 'FontSize', fontsize);
 set(a2, 'xtick', []);
 ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
+
+%%%%%%%%%%%%%%%%%%%% total time %%%%%%%%%%%%%%%%%%%%%%
+figure;
+output = strcat(prefix, ".tt");
+%output = prefix
+%x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
+%x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+%x = {'PR', 'PO', 'HB', '100', '75', '50', '25', '0'};
+x = {'PR', 'PO', 'HB', '0', '25', '50', '75', '100'};
+%x = {'PO', 'HB', '0', '25', '50', '75', '100'};
+%x = {'1', '2', '3', '4', '5', '6', '7', '8'};
+xinterval = 2
+xintervals = 1:xinterval:(xinterval*length(x));
+%xintervals = 1:3:3*length(x);
+%xintervals = 1:4:4*length(x);
+%plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
+%plot(A(:,2));
+
+%xtics = 1:4:16
+%bar(xtics, A(:,1))
+%bar(A(:,1), XTicksLabelStyle = Diagonal)
+bar(xintervals, A(:,1))
+%bar(A(:,1))
+%set(gca, 'XTick', 1:4:32, 'XTickLabel', x, 'FontSize', fontsize)
+set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
+%set(gca, 'XTickLabel', x, 'FontSize', fontsize)
+xlabel('COPY METHOD', 'FontSize', fontsize);
+ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
+%legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
+%bar(x, A(:,1))
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
