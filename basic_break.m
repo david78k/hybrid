@@ -290,11 +290,11 @@ ylim1 = [0 0.002];
 ylim2 = [60 70];
 
 %cla;
-clf;
+%clf;
 p0 = get (gca, 'position');
-delete(gcf);
+%delete(gcf);
 
-cla;
+%cla;
 
 a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2]);
 
