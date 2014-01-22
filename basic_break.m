@@ -312,10 +312,10 @@ output = strcat(prefix, ".dt");
 ylim1 = [0 1];
 ylim2 = [60 70];
 
-cla;
-clf;
+%cla;
+%clf;
 p0 = get (gca, 'position');
-delete(gcf);
+%delete(gcf);
 
 %a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2]);
 
