@@ -297,7 +297,7 @@ bar(xintervals, A(:,1))
 set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
 %set(gca, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
-ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
+%ylabel('TOTAL TIME (SEC)', 'FontSize', fontsize);
 %legend('PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID');
 %bar(x, A(:,1))
 
