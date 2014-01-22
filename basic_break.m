@@ -312,6 +312,7 @@ output = strcat(prefix, ".dt");
 ylim1 = [0 1];
 ylim2 = [60 70];
 
+cla;
 clf;
 p0 = get (gca, 'position');
 delete(gcf);
