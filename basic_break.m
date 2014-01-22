@@ -318,14 +318,14 @@ saveas (1, strcat(output, ".eps"));
 saveas (1, strcat(output, ".emf"));
 
 %%%%%%%%%%%%%%%%%%%% total time %%%%%%%%%%%%%%%%%%%%%%
+clf;
+delete(gcf);
+
 figure;
 output = strcat(prefix, ".tt");
 %output = prefix
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
-
-clf;
-delete(gcf);
 
 %xtics = 1:4:16
 %bar(xtics, A(:,1))
