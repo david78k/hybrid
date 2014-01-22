@@ -286,7 +286,7 @@ xintervals = 1:xinterval:(xinterval*length(x));
 figure;
 output = strcat(prefix, ".dt");
 
-ylim1 = [0 1];
+ylim1 = [0 0.01];
 ylim2 = [60 70];
 
 %cla;
