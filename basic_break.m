@@ -296,7 +296,7 @@ delete(gcf);
 
 %cla;
 
-%a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2]);
+a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2]);
 
 bar(xintervals, A(:,2))
 %set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
