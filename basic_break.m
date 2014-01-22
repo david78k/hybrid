@@ -283,7 +283,7 @@ xintervals = 1:xinterval:(xinterval*length(x));
 %xintervals = 1:4:4*length(x);
 
 %%%%%%%%%%%%%%%%%%%% downtime %%%%%%%%%%%%%%%%%%%%%%
-figure;
+%figure;
 output = strcat(prefix, ".dt");
 
 ylim1 = [0 0.002];
