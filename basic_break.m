@@ -290,9 +290,9 @@ ylim1 = [0 0.002];
 ylim2 = [60 70];
 
 %cla;
-%clf;
+clf;
 p0 = get (gca, 'position');
-%delete(gcf);
+delete(gcf);
 
 %cla;
 
@@ -322,6 +322,9 @@ output = strcat(prefix, ".tt");
 %output = prefix
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
+
+clf;
+delete(gcf);
 
 %xtics = 1:4:16
 %bar(xtics, A(:,1))
