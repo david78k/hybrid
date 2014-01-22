@@ -283,7 +283,7 @@ xintervals = 1:xinterval:(xinterval*length(x));
 %xintervals = 1:4:4*length(x);
 
 %%%%%%%%%%%%%%%%%%%% downtime %%%%%%%%%%%%%%%%%%%%%%
-%figure;
+figure;
 output = strcat(prefix, ".dt");
 
 ylim1 = [0 0.002];
@@ -294,7 +294,7 @@ ylim2 = [60 70];
 p0 = get (gca, 'position');
 %delete(gcf);
 
-%cla;
+cla;
 
 a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2]);
 
