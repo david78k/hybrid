@@ -271,6 +271,17 @@ A (row, 3) = totaldata
 % write the matrix to file with delimiter white space
 dlmwrite (prefix, A, ' ')
 
+%x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
+%x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
+%x = {'PR', 'PO', 'HB', '100', '75', '50', '25', '0'};
+x = {'PR', 'PO', 'HB', '0', '25', '50', '75', '100'};
+%x = {'PO', 'HB', '0', '25', '50', '75', '100'};
+%x = {'1', '2', '3', '4', '5', '6', '7', '8'};
+xinterval = 2
+xintervals = 1:xinterval:(xinterval*length(x));
+%xintervals = 1:3:3*length(x);
+%xintervals = 1:4:4*length(x);
+
 %%%%%%%%%%%%%%%%%%%% downtime %%%%%%%%%%%%%%%%%%%%%%
 figure;
 output = strcat(prefix, ".dt");
@@ -308,16 +319,6 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".tt");
 %output = prefix
-%x = ['PRECOPY', 'POSTCOPY', 'HYBRID', 'PRO-HYBRID'];
-%x = {'PRE', 'POST', 'HYBR', 'PROH100', 'PROH75', 'PROH50', 'PROH25', 'PROH0'};
-%x = {'PR', 'PO', 'HB', '100', '75', '50', '25', '0'};
-x = {'PR', 'PO', 'HB', '0', '25', '50', '75', '100'};
-%x = {'PO', 'HB', '0', '25', '50', '75', '100'};
-%x = {'1', '2', '3', '4', '5', '6', '7', '8'};
-xinterval = 2
-xintervals = 1:xinterval:(xinterval*length(x));
-%xintervals = 1:3:3*length(x);
-%xintervals = 1:4:4*length(x);
 %plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
 %plot(A(:,2));
 
