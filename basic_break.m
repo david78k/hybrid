@@ -339,6 +339,7 @@ saveas (1, strcat(output, ".eps"));
 saveas (1, strcat(output, ".emf"));
 
 %%%%%%%%%%%%%%%%%%%% total data %%%%%%%%%%%%%%%%%%%%%%
+clf;
 figure;
 output = strcat(prefix, ".td");
 
