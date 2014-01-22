@@ -316,7 +316,7 @@ clf;
 p0 = get (gca, 'position');
 delet(gcf);
 
-a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2];
+a1 = axes ('position', [p0(1) p0(2) p0(3) p0(4)/2]);
 
 %bar(A(:,2))
 bar(xintervals, A(:,2))
@@ -325,7 +325,7 @@ set(gca, 'XTick', xintervals, 'XTickLabel', x, 'FontSize', fontsize)
 xlabel('COPY METHOD', 'FontSize', fontsize);
 ylabel('DOWNTIME (SEC)', 'FontSize', fontsize);
 
-a2 = axes ('position', [p0(1) p0(4)/2+.15 p0(3) p0(4)/2];
+a2 = axes ('position', [p0(1) p0(4)/2+.15 p0(3) p0(4)/2]);
 bar(xintervals, A(:,2))
 set(a2, 'xtick', []);
 
